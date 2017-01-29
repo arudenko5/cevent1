@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic-ext');
+@import "_mixins";
+*{
+  padding: 0;
+  margin: 0;
+  @include borderBox;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family:$font-family;
+}
+img {
+  border: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+button, input, textarea {
+  border: none;
+  outline: none;
+}
+h1, h2, h3,h4,h5, h6{
+  font-family:$font-family-title;
+}
+table{
+  border-collapse: collapse;
+}
+.table{
+  width: 100%;
+  &__head{
+    td{
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500!important;
+    }
+  }
+  td{
+    color: $color__almost-black;
+    line-height: 1.2;
+    padding: 15px 15px;
+    font-weight: 300;
+  }
+  tr{
+    &:nth-of-type(even){
+      background-color: $color__very-light-gray;
+    }
+  }
+}
+.hidden{
+  display: none!important;
+}
+.input{
+  min-width: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0)
+}
+.smalltext{
+  font-size: 11px;
+}
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+.form{
+  &__group{
+    border: none;
+    padding: 10px;
+  }
+  &__row{
+    display: block;
+    padding: 5px 20px;
+    margin: 0 -20px;
+    min-height:44px;
+    i{
+      color: $color__light-orange;
+      margin-top:7px;
+    }
+    &:nth-child(odd){
+      background-color: darken($color__dark-blue, 2%);
+    }
+    &--togglable{
+      position: relative;
+      .togglable-icon{
+        position: absolute;
+        right: 7px;
+        top: 7px;
+      }
+    }
+  }
+  &__row-inner{
+    display: flex;
+    align-items: flex-start;
+    &:hover{
+      p{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__input{
+    font-family:$font-family;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 2;
+    color: $color__light-orange;
+    padding-left: 15px;
+  }
+  &__text-holder{
+    display: inline-block;
+    font-family:$font-family;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $color__light-orange;
+    padding-left: 15px;
+    padding-top: 7px;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__calc-block{
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 12px;
+    label{
+      display: inline-block;
+      font-size: 11px;
+      margin-bottom: 5px;
+      width: 100%;
+      color: $color__light-orange;
+    }
+    .expanded &{
+      display: none;
+    }
+  }
+}
+/* PRELOADER */
+#noTrespassingOuterBarG{
+  height:19px;
+  width:156px;
+  border:$color__dark-blue;
+  overflow:hidden;
+  background-color:rgb(255,255,255);
+  margin:auto;
+}
+
+.noTrespassingBarLineG{
+  background-color:rgb(10,162,189);
+  float:left;
+  width:14px;
+  height:117px;
+  margin-right:23px;
+  margin-top:-27px;
+  transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+}
+
+.noTrespassingAnimationG{
+  width:230px;
+  animation-name:noTrespassingAnimationG;
+  -o-animation-name:noTrespassingAnimationG;
+  -ms-animation-name:noTrespassingAnimationG;
+  -webkit-animation-name:noTrespassingAnimationG;
+  -moz-animation-name:noTrespassingAnimationG;
+  animation-duration:0.905s;
+  -o-animation-duration:0.905s;
+  -ms-animation-duration:0.905s;
+  -webkit-animation-duration:0.905s;
+  -moz-animation-duration:0.905s;
+  animation-iteration-count:infinite;
+  -o-animation-iteration-count:infinite;
+  -ms-animation-iteration-count:infinite;
+  -webkit-animation-iteration-count:infinite;
+  -moz-animation-iteration-count:infinite;
+  animation-timing-function:linear;
+  -o-animation-timing-function:linear;
+  -ms-animation-timing-function:linear;
+  -webkit-animation-timing-function:linear;
+  -moz-animation-timing-function:linear;
+}
+
+
+
+@keyframes noTrespassingAnimationG{
+  0%{
+    margin-left:0px;
+  }
+
+  100%{
+    margin-left:-37px;
+  }
+}
+
+@-o-keyframes noTrespassingAnimationG{
+  0%{
+    margin-left:0px;
+  }
+
+  100%{
+    margin-left:-37px;
+  }
+}
+
+@-ms-keyframes noTrespassingAnimationG{
+  0%{
+    margin-left:0px;
+  }
+
+  100%{
+    margin-left:-37px;
+  }
+}
+
+@-webkit-keyframes noTrespassingAnimationG{
+  0%{
+    margin-left:0px;
+  }
+
+  100%{
+    margin-left:-37px;
+  }
+}
+
+@-moz-keyframes noTrespassingAnimationG{
+  0%{
+    margin-left:0px;
+  }
+
+  100%{
+    margin-left:-37px;
+  }
+}
+@import "grid";

@@ -1,0 +1,136 @@
+@import "_base/_base";
+// bower:scss
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+.page{
+  &-wrapper{
+    display: flex;
+    height: 100%;
+    //background-color: gray;
+    &__aside{
+      background-color: #fff;
+      width: 30%;
+      height: 100%;
+      overflow: auto;
+    }
+    &__content {
+      height: 100%;
+      flex: 1;
+    }
+  }
+}
+.side-menu{
+  min-height: 100%;
+  background-color: $color__dark-blue;
+  padding: 20px 10px;
+  &__title{
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight:normal;
+  }
+  &__button{
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    padding:10px 20px;
+    background-color: $color__button-blue;
+    margin: 25px auto 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($color__button-blue, 10%);
+    }
+  }
+}
+.content-block{
+  position: relative;
+  padding: 20px 0;
+  &__row{
+    position: relative;
+    display: flex;
+    padding: 0 20px;
+    z-index: 1;
+  }
+  &__content{
+    position: relative;
+    z-index: 1;
+  }
+  &__tabs{
+    position: relative;
+    z-index: 1;
+  }
+  &__bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: 1;
+    background: #FFAFBD; /* fallback for old browsers */
+    background: -webkit-linear-gradient(45deg, #FFAFBD , #ffc3a0); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(45deg, #FFAFBD , #ffc3a0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    .body__first-time &{
+      background: #2c3e50;
+    }
+  }
+  &__preloader{
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(75,75,75, 0.75 );
+    z-index: 9;
+    &-text{
+      font-size: 30px;
+      color: #ffffff;
+      font-family:$font-family-title;
+      font-weight: bold;
+      margin: auto;
+    }
+  }
+  &__first-time-overlay{
+    display: none;
+    .body__first-time &{
+      position: absolute;
+      display: block;
+      z-index: 100;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(238, 238, 238, 0.5);
+    }
+  }
+}
+.calc-block{
+  width: 80%;
+  padding: 20px 10px 0;
+  margin: 0 auto;
+  &__title{
+    display: none;
+    font-family:$font-family-title;
+    color: $color__dark-gray;
+  }
+}
+.tabs{
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    margin:0 20px;
+    color: darken($color__rose, 30%);;
+    font-weight: bold;
+    font-family:$font-family-title;
+    cursor: pointer;
+    &.active{
+      color: darken($color__rose, 15%);
+    }
+  }
+}

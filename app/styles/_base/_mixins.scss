@@ -1,0 +1,15 @@
+// MIXINS -> миксины
+@import "_var";
+
+@mixin borderBox {
+  box-sizing: border-box;
+}
+@mixin borderRadius($radius) {
+  border-radius: $radius;
+}
+@mixin centerContainer {
+  margin: 0 auto;
+}
+@mixin transition($props: all, $time: 0.3s, $type: ease-out, $delay: 0s ){
+  transition: $props $time $type $delay;
+}
